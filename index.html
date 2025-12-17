@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mini-Games</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="menu">
+            <h1>Welcome to Mini-Games!</h1>
+            <button onclick="startGame('connectFour')">Play Connect Four</button>
+            <button onclick="startGame('luckyPig')">Play Lucky Pig</button>
+            <button onclick="startGame('ticTacToe')">Play Tic Tac Toe</button>
+        </div>
+        <div id="game-container"></div>
+
+        <script src="app.js"></script>
+        <script src="games/connectFour.js"></script>
+        <script src="games/luckyPig.js"></script>
+        <script src="games/ticTacToe.js"></script>
+        
+    </body>
+</html>
