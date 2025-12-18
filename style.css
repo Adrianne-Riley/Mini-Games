@@ -50,8 +50,8 @@ body {
   display: flex;
 }
 .grid-box {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border: 1px solid #333;
   border-radius: 50%;
   background: #eee;
@@ -61,12 +61,16 @@ body {
 .grid-box.filled.yellowPlayer { background: yellow; }
 
 #playerTurn, #message { 
-  margin: 10px 0; 
+  text-align: center;
+  font-weight: bold;
+  margin: 10px; 
   font-size: 18px; 
 }
 
 #controls {
   margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
 }
 #controls button {
   font-size: 1em;
@@ -236,4 +240,56 @@ h2, p {
   color: #416cea;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+}
+
+/* Smartphones (portrait) */ 
+@media (max-width: 480px) { 
+  .game-container {
+     width: 90%; 
+     margin: 0 auto; 
+     padding: 10px; 
+  } 
+  .menu {
+     flex-direction: column; 
+     font-size: 14px; 
+  } 
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+} 
+
+/* Tablets */ 
+@media (min-width: 481px) and (max-width: 768px) { 
+  .game-container { 
+    width: 90%; 
+    margin: 0 auto; 
+  } 
+  .menu {
+    flex-direction: row; 
+    justify-content: space-around; 
+    font-size: 16px; 
+  } 
+} 
+
+/* Small laptops */ 
+@media (min-width: 769px) and (max-width: 1024px) { 
+  .game-container { 
+    width: 80%; 
+    margin: 0 auto; 
+  } 
+  .menu {
+    font-size: 18px; 
+  }
+}
+
+/* Desktops and larger screens */
+@media (min-width: 1025px) { 
+  .game-container { 
+    width: 70%; 
+    margin: 0 auto; 
+  } 
+  .menu {
+    font-size: 20px; 
+  } 
 }
